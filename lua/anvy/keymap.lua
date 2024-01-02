@@ -4,6 +4,7 @@ local lsp_actions = {
 	r = { "<cmd>Telescope lsp_references<cr>", "References" },
 	d = { "<cmd>Telescope lsp_definitions<cr>", "Definitions" },
 	I = { "<cmd>Telescope lsp_implementations<cr>", "Implementations" },
+	s = { "<cmd>AerialToggle<cr>", "Toggle Symbols" },
 }
 
 return {
@@ -44,13 +45,13 @@ return {
 	},
 	["<leader>g"] = {
 		name = "Git",
-		g = { require('anvy.utils.lazygit'), "Lazygit" },
+		g = { require("anvy.utils.lazygit"), "Lazygit" },
 	},
 	["<leader>s"] = {
 		name = "Session",
-		s = { require('resession').save, "Save" },
-		l = { require('resession').load, "Load" },
-		d = { require('resession').delete, "Delete" },
+		s = { require("resession").save, "Save" },
+		l = { require("resession").load, "Load" },
+		d = { require("resession").delete, "Delete" },
 	},
 	["<C-h>"] = { "<cmd>SmartCursorMoveLeft<cr>", "Move Left" },
 	["<C-l>"] = { "<cmd>SmartCursorMoveRight<cr>", "Move Right" },
