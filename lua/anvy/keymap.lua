@@ -44,5 +44,7 @@ return {
 	["<leader>g"] = {
 		name = "Git",
 		g = { "<cmd>lua lazygit()<cr>", "Lazygit" }
-	}
+	},
+	["<C-h>"] = { "<cmd>SmartCursorMoveLeft<cr>", "Move Left" },
+	["<C-l>"] = { "<cmd>SmartCursorMoveRight<cr>", "Move Right" },
 }
