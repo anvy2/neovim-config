@@ -1,5 +1,4 @@
-lazygit = require("anvy.utils.lazygit")
-
+-- lazygit = require("anvy.utils.lazygit")
 local lsp_actions = {
 	name = "LSP Actions",
 	r = { "<cmd>Telescope lsp_references<cr>", "References" },
@@ -45,7 +44,13 @@ return {
 	},
 	["<leader>g"] = {
 		name = "Git",
-		g = { "<cmd>lua lazygit()<cr>", "Lazygit" },
+		g = { require('anvy.utils.lazygit'), "Lazygit" },
+	},
+	["<leader>s"] = {
+		name = "Session",
+		s = { require('resession').save, "Save" },
+		l = { require('resession').load, "Load" },
+		d = { require('resession').delete, "Delete" },
 	},
 	["<C-h>"] = { "<cmd>SmartCursorMoveLeft<cr>", "Move Left" },
 	["<C-l>"] = { "<cmd>SmartCursorMoveRight<cr>", "Move Right" },
