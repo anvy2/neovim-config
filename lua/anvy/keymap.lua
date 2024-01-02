@@ -12,7 +12,7 @@ return {
 		name = "NvimTree",
 		o = { "<cmd>NvimTreeFocus<cr>", "Focus File Explorer" },
 		e = { "<cmd>NvimTreeToggle<cr>", "Toggle File Explorer" },
-		f = { "<cmd>NvimTreeFindFileToggle<cr>", "Current File" },
+		f = { "<cmd>NvimTreeFindFile<cr>", "Current File" },
 		d = { "<cmd>NvimTreeCollapseKeepBuffers<cr>", "Collapse unopened dir" },
 		c = { "<cmd>NvimTreeCollapse<cr>", "Collapse Recursively" },
 	},
