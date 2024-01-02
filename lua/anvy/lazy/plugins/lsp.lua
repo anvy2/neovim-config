@@ -94,6 +94,10 @@ return {
 			-- on_attach = on_attach,
 		})
 
+		lspconfig["clangd"].setup({
+			capabilities = capabilities,
+		})
+
 		-- configure svelte server
 		lspconfig["svelte"].setup({
 			capabilities = capabilities,

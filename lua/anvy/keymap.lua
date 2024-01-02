@@ -21,11 +21,12 @@ return {
 		f = { "<cmd>Telescope find_files<cr>", "Find files" },
 		w = { "<cmd>Telescope live_grep<cr>", "Find in files" },
 		g = { "<cmd>Telescope grep_string<cr>", "Find in current file" },
-		k = { "<cmd>Telescope keymaps<cr>", "Show all keymappings" }
+		k = { "<cmd>Telescope keymaps<cr>", "Show all keymappings" },
 	},
 	["<leader>b"] = {
 		name = "Buffer",
 		f = { "<cmd>Telescope buffers<cr>", "Search buffers" },
+		r = { vim.lsp.buf.rename, "Rename" },
 	},
 	["g"] = lsp_actions,
 	["<leader>l"] = lsp_actions,
@@ -33,7 +34,7 @@ return {
 		name = "Diagnostics",
 		f = { "<cmd>Telescope diagnostics bufnr=0<cr>", "Show file diagnostics" },
 		p = { "<cmd>Telescope diagnostics<cr>", "Show project diagnostics" },
-		l = { vim.diagnostic.open_float, "Show line diagnostics" }
+		l = { vim.diagnostic.open_float, "Show line diagnostics" },
 	},
 	["<leader>t"] = {
 		name = "Terminal",
@@ -43,7 +44,7 @@ return {
 	},
 	["<leader>g"] = {
 		name = "Git",
-		g = { "<cmd>lua lazygit()<cr>", "Lazygit" }
+		g = { "<cmd>lua lazygit()<cr>", "Lazygit" },
 	},
 	["<C-h>"] = { "<cmd>SmartCursorMoveLeft<cr>", "Move Left" },
 	["<C-l>"] = { "<cmd>SmartCursorMoveRight<cr>", "Move Right" },
