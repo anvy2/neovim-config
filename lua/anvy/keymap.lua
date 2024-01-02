@@ -53,6 +53,6 @@ return {
 		l = { require("resession").load, "Load" },
 		d = { require("resession").delete, "Delete" },
 	},
-	["<C-h>"] = { "<cmd>SmartCursorMoveLeft<cr>", "Move Left" },
+	["<C-j>"] = { "<cmd>SmartCursorMoveLeft<cr>", "Move Left" },
 	["<C-l>"] = { "<cmd>SmartCursorMoveRight<cr>", "Move Right" },
 }

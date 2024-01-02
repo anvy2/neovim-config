@@ -87,16 +87,16 @@ return {
 				local FloatPreview = require("float-preview")
 				api.config.mappings.default_on_attach(bufnr)
 				FloatPreview.attach_nvimtree(bufnr)
-				-- local close_wrap = FloatPreview.close_wrap
-				-- local function opts(desc)
-				-- 	return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
-				-- end
+				local close_wrap = FloatPreview.close_wrap
+				local function opts(desc)
+					return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+				end
 
 				--     -- default mappings
-				-- vim.keymap.set("n", "<C-t>", close_wrap(api.node.open.tab), opts("Open: New Tab"))
-				-- vim.keymap.set("n", "<C-v>", close_wrap(api.node.open.vertical), opts("Open: Vertical Split"))
-				-- vim.keymap.set("n", "<C-s>", close_wrap(api.node.open.horizontal), opts("Open: Horizontal Split"))
-				-- vim.keymap.set("n", "<CR>", close_wrap(api.node.open.edit), opts("Open"))
+				vim.keymap.set("n", "<C-t>", close_wrap(api.node.open.tab), opts("Open: New Tab"))
+				vim.keymap.set("n", "<C-v>", close_wrap(api.node.open.vertical), opts("Open: Vertical Split"))
+				vim.keymap.set("n", "<C-h>", close_wrap(api.node.open.horizontal), opts("Open: Horizontal Split"))
+				vim.keymap.set("n", "<CR>", close_wrap(api.node.open.edit), opts("Open"))
 				-- vim.keymap.set("n", "<Tab>", close_wrap(api.node.open.preview), opts("Open"))
 				-- vim.keymap.set("n", "o", close_wrap(api.node.open.edit), opts("Open"))
 				-- vim.keymap.set("n", "O", close_wrap(api.node.open.no_window_picker), opts("Open: No Window Picker"))
