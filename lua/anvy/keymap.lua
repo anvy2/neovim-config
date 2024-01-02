@@ -20,13 +20,13 @@ return {
 		name = "Telescope",
 		f = { "<cmd>Telescope find_files<cr>", "Find files" },
 		w = { "<cmd>Telescope live_grep<cr>", "Find in files" },
-		g = { "<cmd>Telescope grep_string<cr>", "Find in current file" },
 		k = { "<cmd>Telescope keymaps<cr>", "Show all keymappings" },
 	},
 	["<leader>b"] = {
 		name = "Buffer",
-		f = { "<cmd>Telescope buffers<cr>", "Search buffers" },
+		b = { "<cmd>Telescope buffers<cr>", "Search buffers" },
 		r = { vim.lsp.buf.rename, "Rename" },
+		f = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Search current buffer" },
 	},
 	["g"] = lsp_actions,
 	["<leader>l"] = lsp_actions,
@@ -35,6 +35,7 @@ return {
 		f = { "<cmd>Telescope diagnostics bufnr=0<cr>", "Show file diagnostics" },
 		p = { "<cmd>Telescope diagnostics<cr>", "Show project diagnostics" },
 		l = { vim.diagnostic.open_float, "Show line diagnostics" },
+		t = { "<cmd>TroubleToggle<cr>", "Trouble" },
 	},
 	["<leader>t"] = {
 		name = "Terminal",
