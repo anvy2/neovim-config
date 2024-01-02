@@ -1,26 +1,31 @@
 return {
-    "nvim-tree/nvim-tree.lua",
-    version = "*",
-    lazy = false,
-    dependencies = {
-        "nvim-tree/nvim-web-devicons",
-    },
-    config = function()
-        require("nvim-tree").setup {
-            -- on_attach = function(bufnr)
-            --     local api = require "nvim-tree.api"
+	"nvim-tree/nvim-tree.lua",
+	version = "*",
+	lazy = false,
+	dependencies = {
+		"nvim-tree/nvim-web-devicons",
+	},
+	config = function()
+		require("nvim-tree").setup({
 
-            --     local function opts(desc)
-            --         return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
-            --     end
+			git = {
+				enable = true,
+				ignore = false,
+			},
+			-- on_attach = function(bufnr)
+			--     local api = require "nvim-tree.api"
 
-            --     -- default mappings
-            --     api.config.mappings.default_on_attach(bufnr)
+			--     local function opts(desc)
+			--         return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+			--     end
 
-            --     -- custom mappings
-            --     vim.keymap.set('n', '<leader>t', api.tree.change_root_to_parent, opts('Up'))
-            --     vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
-            -- end,
-        }
-    end,
+			--     -- default mappings
+			--     api.config.mappings.default_on_attach(bufnr)
+
+			--     -- custom mappings
+			--     vim.keymap.set('n', '<leader>t', api.tree.change_root_to_parent, opts('Up'))
+			--     vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
+			-- end,
+		})
+	end,
 }

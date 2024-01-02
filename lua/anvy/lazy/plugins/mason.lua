@@ -4,15 +4,6 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 	},
-	cmd = {
-		"Mason",
-		"MasonInstall",
-		"MasonUninstall",
-		"MasonUninstallAll",
-		"MasonLog",
-		"MasonUpdate", -- AstroNvim extension here as well
-		"MasonUpdateAll", -- AstroNvim specific
-	},
 	config = function()
 		-- import mason
 		local mason = require("mason")
@@ -35,20 +26,30 @@ return {
 
 		mason_lspconfig.setup({
 			-- list of servers for mason to install
-			ensure_installed = {
-				"tsserver",
-				"html",
-				"cssls",
-				"tailwindcss",
-				"svelte",
-				"lua_ls",
-				"graphql",
-				"emmet_ls",
-				"prismals",
-				"pyright",
-				"gopls",
-				"clangd"
-			},
+			-- ensure_installed = {
+			-- 	"tsserver",
+			-- 	"html",
+			-- 	"cssls",
+			-- 	"tailwindcss",
+			-- 	"svelte",
+			-- 	"lua_ls",
+			-- 	"graphql",
+			-- 	"emmet_ls",
+			-- 	"prismals",
+			-- 	"pyright",
+			-- 	"gopls",
+			-- 	"clangd",
+			-- 	"bufls",
+			-- 	"volar",
+			-- 	"sqls",
+			-- 	"rust_analyzer",
+			-- 	"htmx",
+			-- 	"diagnosticls",
+			-- 	"docker_compose_language_service",
+			-- 	"denols",
+			-- 	"bashls",
+			-- 	"ast_grep",
+			-- },
 			-- auto-install configured servers (with lspconfig)
 			automatic_installation = true, -- not the same as ensure_installed
 		})
@@ -58,10 +59,21 @@ return {
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
 				"isort", -- python formatter
-				"black", -- python formatter
+				"blue", -- python formatter
 				"pylint", -- python linter
-				"eslint_d", -- js linter
-				"clandg"
+				"eslint_d",
+				"buf", -- protobuf linter and formatter
+				"yamllint",
+				"sqlfluff",
+				"djlint",
+				"shellcheck",
+				"ast_grep",
+				"revive",
+				"staticcheck",
+				"luacheck",
+				"yamlfmt",
+				"xmlformatter",
+				"sql-formatter",
 			},
 		})
 	end,

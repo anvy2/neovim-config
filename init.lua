@@ -1,5 +1,4 @@
 vim.api.nvim_set_option("clipboard", "unnamed")
-vim.o.wrap = false
 -- vim.wo.number = true
 -- vim.wo.relativenumber = true
 --- Set global variables

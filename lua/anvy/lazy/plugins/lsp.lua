@@ -97,7 +97,9 @@ return {
 		lspconfig["clangd"].setup({
 			capabilities = capabilities,
 		})
-
+		lspconfig["bufls"].setup({
+			capabilities = capabilities,
+		})
 		-- configure svelte server
 		lspconfig["svelte"].setup({
 			capabilities = capabilities,
@@ -145,6 +147,48 @@ return {
 			capabilities = capabilities,
 			-- on_attach = on_attach,
 		})
+
+		lspconfig["volar"].setup({
+			capabilities = capabilities,
+		})
+
+		lspconfig["sqls"].setup({
+			capabilities = capabilities,
+		})
+
+		lspconfig["rust_analyzer"].setup({
+			capabilities = capabilities,
+		})
+
+		lspconfig["htmx"].setup({
+			capabilities = capabilities,
+		})
+
+		lspconfig["helm_ls"].setup({
+			capabilities = capabilities,
+		})
+
+		lspconfig["diagnosticls"].setup({
+			capabilities = capabilities,
+		})
+
+		lspconfig["docker_compose_language_service"].setup({
+			capabilities = capabilities,
+		})
+
+		lspconfig["denols"].setup({
+			capabilities = capabilities,
+		})
+
+		lspconfig["bashls"].setup({
+			capabilities = capabilities,
+		})
+
+		lspconfig["ast_grep"].setup({
+			capabilities = capabilities,
+		})
+
+		-- lspconfig[""]
 
 		-- configure lua server (with special settings)
 		lspconfig["lua_ls"].setup({
