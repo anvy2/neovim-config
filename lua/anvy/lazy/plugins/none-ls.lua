@@ -61,21 +61,21 @@ return {
 				formatting.yamlfmt,
 				formatting.xmlformatter,
 				formatting.blue,
-				diagnostics.shellcheck,
-				diagnostics.pylint,
-				diagnostics.revive,
-				diagnostics.buf,
-				diagnostics.luacheck,
+				-- diagnostics.shellcheck,
+				-- diagnostics.pylint,
+				-- diagnostics.revive,
+				-- diagnostics.buf,
+				-- diagnostics.luacheck,
 				formatting.gofumpt,
-				diagnostics.staticcheck,
-				diagnostics.sqlfluff,
-				diagnostics.yamllint,
+				-- diagnostics.staticcheck,
+				-- diagnostics.sqlfluff,
+				-- diagnostics.yamllint,
 				formatting.buf,
-				diagnostics.eslint_d.with({ -- js/ts linter
-					condition = function(utils)
-						return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs" }) -- only enable if root has .eslintrc.js or .eslintrc.cjs
-					end,
-				}),
+				-- diagnostics.eslint_d.with({ -- js/ts linter
+				-- 	condition = function(utils)
+				-- 		return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs" }) -- only enable if root has .eslintrc.js or .eslintrc.cjs
+				-- 	end,
+				-- }),
 			},
 			-- configure format on save
 			on_attach = function(current_client, bufnr)

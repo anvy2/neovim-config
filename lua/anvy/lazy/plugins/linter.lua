@@ -7,6 +7,8 @@ return {
 	config = function()
 		local lint = require("lint")
 
+		lint.linters.staticcheck = require("anvy.configs.linters.staticcheck")
+
 		lint.linters_by_ft = {
 			javascript = { "eslint_d" },
 			typescript = { "eslint_d" },
@@ -16,6 +18,12 @@ return {
 			python = { "pylint" },
 			go = { "staticcheck", "revive" },
 			lua = { "luacheck" },
+			yaml = { "yamllint" },
+			sql = { "sqlfluff" },
+			proto = { "buf_lint" },
+			c = { "cpplint" },
+			cplusplus = { "cpplint" },
+			sh = { "shellcheck" },
 		}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
