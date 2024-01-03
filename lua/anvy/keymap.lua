@@ -1,13 +1,3 @@
--- lazygit = require("anvy.utils.lazygit")
-local lsp_actions = {
-	name = "LSP Actions",
-	r = { "<cmd>Telescope lsp_references<cr>", "References" },
-	d = { "<cmd>Telescope lsp_definitions<cr>", "Definitions" },
-	I = { "<cmd>Telescope lsp_implementations<cr>", "Implementations" },
-	s = { "<cmd>AerialToggle<cr>", "Toggle Symbols" },
-	t = { "<cmd>Telescope treesitter<cr>", "Search treesittter symbols" },
-}
-
 return {
 	["<leader>n"] = {
 		name = "NvimTree",
@@ -18,23 +8,36 @@ return {
 		c = { "<cmd>NvimTreeCollapse<cr>", "Collapse Recursively" },
 	},
 	["<leader>f"] = {
-		name = "Telescope",
-		f = { "<cmd>Telescope find_files<cr>", "Find files" },
-		w = { "<cmd>Telescope live_grep<cr>", "Find in files" },
-		k = { "<cmd>Telescope keymaps<cr>", "Show all keymappings" },
+		name = "Fzf",
+		f = { "<cmd>FzfLua files<cr>", "Find files" },
+		w = { "<cmd>FzfLua live_grep<cr>", "Find in files" },
+		r = { vim.lsp.buf.rename, "Rename" },
 	},
 	["<leader>b"] = {
 		name = "Buffer",
-		b = { "<cmd>Telescope buffers<cr>", "Search buffers" },
-		r = { vim.lsp.buf.rename, "Rename" },
-		f = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Search current buffer" },
+		b = { "<cmd>FzfLua buffers<cr>", "Find Buffers" },
 	},
-	["g"] = lsp_actions,
-	["<leader>l"] = lsp_actions,
+	["g"] = {
+		name = "LSP Actions",
+		r = { "<cmd>FzfLua lsp_references<cr>", "References" },
+		d = { "<cmd>FzfLua lsp_definitions<cr>", "Definitions" },
+		D = { "<cmd>FzfLua lsp_declarations<cr>", "Declarations" },
+		I = { "<cmd>FzfLua lsp_implementations<cr>", "Implementations" },
+		s = { "<cmd>FzfLua lsp_document_symbols<cr>", "Search symbols" },
+	},
+	["<leader>l"] = {
+		name = "LSP Actions",
+		r = { "<cmd>FzfLua lsp_references<cr>", "References" },
+		d = { "<cmd>FzfLua lsp_definitions<cr>", "Definitions" },
+		D = { "<cmd>FzfLua lsp_declarations<cr>", "Declarations" },
+		I = { "<cmd>FzfLua lsp_implementations<cr>", "Implementations" },
+		s = { "<cmd>FzfLua lsp_document_symbols<cr>", "Search symbols" },
+		a = { "<cmd>FzfLua lsp_code_actions<cr>", "Code Actions" },
+	},
 	["<leader>d"] = {
 		name = "Diagnostics",
-		f = { "<cmd>Telescope diagnostics bufnr=0<cr>", "Show file diagnostics" },
-		p = { "<cmd>Telescope diagnostics<cr>", "Show project diagnostics" },
+		d = { "<cmd>FzfLua diagnostics_document<cr>", "Show file diagnostics" },
+		w = { "<cmd>FzfLua diagnostics_workspace<cr>", "Show workspace diagnostics" },
 		l = { vim.diagnostic.open_float, "Show line diagnostics" },
 		t = { "<cmd>TroubleToggle<cr>", "Trouble" },
 	},
@@ -47,12 +50,21 @@ return {
 	["<leader>g"] = {
 		name = "Git",
 		g = { require("anvy.utils.lazygit"), "Lazygit" },
+		b = { "<cmd>FzfLua git_branches<cr>", "Branches" },
+		t = { "<cmd>FzfLua git_tags<cr>", "Tags" },
+		s = { "<cmd>FzfLua git_status<cr>", "Status" },
+		c = { "<cmd>FzfLua git_commits<cr>", "Commits" },
+		S = { "<cmd>FzfLua git_stash<cr>", "Stash" },
 	},
 	["<leader>s"] = {
 		name = "Session",
 		s = { require("resession").save, "Save" },
 		l = { require("resession").load, "Load" },
 		d = { require("resession").delete, "Delete" },
+	},
+	["<leader>m"] = {
+		name = "Misc",
+		k = { "<cmd>FzfLua keymaps<cr>", "Keymaps" },
 	},
 	["<C-j>"] = { "<cmd>SmartCursorMoveLeft<cr>", "Move Left" },
 	["<C-l>"] = { "<cmd>SmartCursorMoveRight<cr>", "Move Right" },
