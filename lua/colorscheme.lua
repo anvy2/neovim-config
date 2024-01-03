@@ -1,1 +1,1 @@
-return "oxocarbon"
+return "rose-pine-main"

@@ -65,6 +65,7 @@ return {
 	["<leader>m"] = {
 		name = "Misc",
 		k = { "<cmd>FzfLua keymaps<cr>", "Keymaps" },
+		t = { "<cmd>FzfLua colorschemes<cr>", "Colorschemes" },
 	},
 	["<C-j>"] = { "<cmd>SmartCursorMoveLeft<cr>", "Move Left" },
 	["<C-l>"] = { "<cmd>SmartCursorMoveRight<cr>", "Move Right" },

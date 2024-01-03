@@ -82,6 +82,37 @@ return {
 				enable = true,
 				ignore = false,
 			},
+			renderer = {
+				highlight_bookmarks = "icon",
+				icons = {
+					git_placement = "before",
+					glyphs = {
+						default = "",
+						symlink = "",
+						bookmark = "󰆤",
+						modified = "●",
+						folder = {
+							arrow_closed = "",
+							arrow_open = "",
+							default = "",
+							open = "",
+							empty = "",
+							empty_open = "",
+							symlink = "",
+							symlink_open = "",
+						},
+						git = {
+							unstaged = "",
+							staged = "",
+							unmerged = "",
+							renamed = "➜",
+							untracked = "󰓏",
+							deleted = "",
+							ignored = "◌",
+						},
+					},
+				},
+			},
 			on_attach = function(bufnr)
 				local api = require("nvim-tree.api")
 				local FloatPreview = require("float-preview")
