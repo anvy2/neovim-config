@@ -5,7 +5,8 @@ local groups = { "lnum", "col", "message" }
 return {
 	cmd = "staticcheck",
 	stdin = false,
-	args = {},
+	append_fname = false,
+	args = { "-checks", '"all"' },
 	ignore_exitcode = true,
 	parser = require("lint.parser").from_pattern(pattern, groups, nil, {
 		["source"] = "staticcheck",

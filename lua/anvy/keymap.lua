@@ -5,6 +5,7 @@ local lsp_actions = {
 	d = { "<cmd>Telescope lsp_definitions<cr>", "Definitions" },
 	I = { "<cmd>Telescope lsp_implementations<cr>", "Implementations" },
 	s = { "<cmd>AerialToggle<cr>", "Toggle Symbols" },
+	t = { "<cmd>Telescope treesitter<cr>", "Search treesittter symbols" },
 }
 
 return {
