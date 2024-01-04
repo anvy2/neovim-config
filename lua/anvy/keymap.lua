@@ -15,7 +15,10 @@ return {
 	},
 	["<leader>b"] = {
 		name = "Buffer",
-		b = { "<cmd>FzfLua buffers<cr>", "Find Buffers" },
+		s = { "<cmd>FzfLua buffers<cr>", "Search" },
+		b = { "<cmd>BufferLinePick<cr>", "Select" },
+		c = { "<cmd>BufferLinePickClose<cr>", "Close" },
+		o = { "<cmd>BufferLineCloseOthers<cr>", "Close Others" },
 	},
 	["g"] = {
 		name = "LSP Actions",
