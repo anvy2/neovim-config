@@ -1,1 +1,1 @@
-return "rose-pine-main"
+return "github_dark_default"

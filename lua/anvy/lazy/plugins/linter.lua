@@ -22,7 +22,7 @@ return {
 			sql = { "sqlfluff" },
 			proto = { "buf_lint" },
 			c = { "cpplint" },
-			cplusplus = { "cpplint" },
+			cc = { "cpplint" },
 			sh = { "shellcheck" },
 		}
 

@@ -3,8 +3,10 @@ return {
 	version = "*",
 	dependencies = "nvim-tree/nvim-web-devicons",
 	config = function()
-		require("bufferline").setup({
+		local bufferline = require("bufferline")
+		bufferline.setup({
 			options = {
+				themable = true,
 				indicator = {
 					style = "underline",
 				},
@@ -13,13 +15,42 @@ return {
 						filetype = "NvimTree",
 						text = "File Explorer",
 						text_align = "center",
-						separator = true,
+						separator = false,
 					},
 				},
 				diagnostics = false,
 				color_icons = false,
 				show_buffer_icons = false,
-				separator_style = "slope",
+				separator_style = { "", " " },
+			},
+			highlights = {
+				offset_separator = {
+					bg = "#222831",
+					fg = "#222831",
+				},
+				background = {
+					fg = "#756AB6",
+				},
+				buffer_selected = {
+					fg = "#AC87C5",
+				},
+				buffer_visible = {
+					fg = "#AC87C5",
+				},
+				close_button = {
+					fg = "#756AB6",
+				},
+				close_button_visible = {
+					fg = "#756AB6",
+				},
+				close_button_selected = {
+					fg = "#AC87C5",
+				},
+				pick_selected = {
+					fg = "#AC87C5",
+					bold = true,
+					italic = true,
+				},
 			},
 		})
 	end,

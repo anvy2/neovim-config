@@ -82,6 +82,9 @@ return {
 				enable = true,
 				ignore = false,
 			},
+			actions = {
+				open_file = { resize_window = true },
+			},
 			renderer = {
 				highlight_bookmarks = "icon",
 				icons = {
