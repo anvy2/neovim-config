@@ -15,7 +15,7 @@ return {
 						filetype = "NvimTree",
 						text = "File Explorer",
 						text_align = "center",
-						separator = false,
+						separator = true,
 					},
 				},
 				diagnostics = false,
@@ -25,8 +25,8 @@ return {
 			},
 			highlights = {
 				offset_separator = {
-					bg = "#222831",
-					fg = "#222831",
+					bg = "#000000",
+					fg = "#000000",
 				},
 				background = {
 					fg = "#756AB6",
