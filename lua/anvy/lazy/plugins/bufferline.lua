@@ -15,19 +15,23 @@ return {
 						filetype = "NvimTree",
 						text = "File Explorer",
 						text_align = "center",
-						separator = true,
+						separator = false,
 					},
 				},
 				diagnostics = false,
 				color_icons = false,
 				show_buffer_icons = false,
-				separator_style = { "", " " },
+				separator_style = { "", "" },
 			},
 			highlights = {
 				offset_separator = {
-					bg = "#000000",
-					fg = "#000000",
+					bg = "#ffffff",
+					fg = "#ffffff",
 				},
+				-- offset_separator = {
+				-- 	bg = "#000000",
+				-- 	fg = "#000000",
+				-- },
 				background = {
 					fg = "#756AB6",
 				},

@@ -72,4 +72,5 @@ return {
 	},
 	["<C-j>"] = { "<cmd>SmartCursorMoveLeft<cr>", "Move Left" },
 	["<C-l>"] = { "<cmd>SmartCursorMoveRight<cr>", "Move Right" },
+	["<leader>c"] = { "<cmd>bdelete<cr>", "CloseBuffer" },
 }

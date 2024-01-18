@@ -38,9 +38,9 @@ return {
 					end,
 				},
 				mocha = {
-					base = "#0b0b12",
-					mantle = "#0b0b12",
-					crust = "#0b0b12",
+					base = "#151515",
+					mantle = "#151515",
+					crust = "#151515",
 					-- rosewater = "#efc9c2",
 					-- flamingo = "#ebb2b2",
 					-- pink = "#f2a7de",

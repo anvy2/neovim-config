@@ -5,7 +5,7 @@ return {
 		require("resession").setup({
 			autosave = {
 				enabled = true,
-				interval = 60,
+				interval = 30,
 				notify = true,
 			},
 		})
