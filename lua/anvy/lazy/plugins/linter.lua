@@ -7,7 +7,7 @@ return {
 	config = function()
 		local lint = require("lint")
 
-		lint.linters.staticcheck = require("anvy.configs.linters.staticcheck")
+		-- lint.linters.staticcheck = require("anvy.configs.linters.staticcheck")
 
 		lint.linters_by_ft = {
 			javascript = { "eslint_d" },
@@ -16,7 +16,7 @@ return {
 			typescriptreact = { "eslint_d" },
 			svelte = { "eslint_d" },
 			python = { "pylint" },
-			go = { "staticcheck", "revive" },
+			go = { "revive" },
 			lua = { "luacheck" },
 			yaml = { "yamllint" },
 			sql = { "sqlfluff" },
